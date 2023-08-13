@@ -1,0 +1,34 @@
+---
+version: "2"
+services:
+  nextcloud:
+    image: linuxserver/nextcloud
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=
+      - MYSQL_HOST=nextcloud_db
+    volumes:
+      - /portainer/Files/AppData/Config/Nextcloud/Config:/config
+      - /home/liriz/Downloads:/Downloads #letak folder untuk menyimpan hasil download
+    ports:
+      - 8092:443
+    restart: unless-stopped
+    depends_on:
+      - nextcloud_db
+  nextcloud_db:
+    image: linuxserver/mariadb
+    container_name: nextcloud_db #nama database yang nantinya diinput ketika pertama kali instalasi
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MYSQL_ROOT_PASSWORD=asuraimu21
+      - TZ=
+      - MYSQL_DATABASE=nextcloud_db
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=asuraimu21
+    volumes:
+      - /portainer/AppData/Config/Nextcloud/DB:/config
+    restart: unless-stopped
+
