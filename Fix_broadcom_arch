@@ -1,0 +1,3 @@
+modprobe -r bcma wl
+modprobe wl
+systemctl restart iwd
