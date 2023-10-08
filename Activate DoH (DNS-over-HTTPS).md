@@ -30,7 +30,7 @@ Kemudian tambahkan alamat DNS google berikut setelah menambahkan domainnya:
     8.8.8.8
     8.8.4.4
 
-Setelah statik DNS sudah diseting, tinggal tambahkan alamat DNS-over-HTTPS nya, pada contoh praktek kali, saya pakai dari layanan Cloudflare di bagian "Use DOH Server" :
+Setelah statik DNS sudah diseting, tinggal tambahkan alamat DNS-over-HTTPS nya, pada contoh praktek kali ini, saya pakai dari layanan Cloudflare di bagian "Use DOH Server" :
 
     https://cloudflare-dns.com/dns-query
 
