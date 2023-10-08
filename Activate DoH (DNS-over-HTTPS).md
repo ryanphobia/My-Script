@@ -35,3 +35,9 @@ Setelah statik DNS sudah diseting, tinggal tambahkan alamat DNS-over-HTTPS nya, 
     https://cloudflare-dns.com/dns-query
 
 Setelah diisi, jangan lupa centang opsi "Verify DoH Certificate" dan "Allow Remote Request"
+
+Untuk melakukan testing, silakan cek di layanan pada Situs DNS Leak Test maupun di
+
+    https://1.1.1.1/help
+
+Setelah DNS yang terdeteksi sesuai dari layanan yang kita gunakan, sekarang tinggal testing untuk membuka situs maupun website yang diblokir oleh vendor ISP.
