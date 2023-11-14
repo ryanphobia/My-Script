@@ -20,5 +20,5 @@ Tutorial kali ini ditujukan bagi kalian yang sebelumnya menginstal OS berbasis l
         exit
 6. Setelah itu, kembali boot untuk masuk ke MacOS
 7. Kemudian mount direktori/partisi EFI pada perangkat dengan aplikasi seperti ESP Mounter Pro ataupun Opencore Configurator, pada tutorial kali ini saya menggunakan Opencore Configurator untuk mounting partisi EFI
-8. Lanjut buka file `map_table.txt` 
+8. Lanjut buka file ```map_table.txt```
 10. Pada contoh kali
