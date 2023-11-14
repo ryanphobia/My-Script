@@ -4,7 +4,7 @@ Tutorial kali ini ditujukan bagi kalian yang sebelumnya menginstal OS berbasis l
 
 Sebelum melakukan configurasi pada file `config.plist`, lakukan backup terlebih dahulu atau bisa melakukan ujicoba booting dengan flash drive (FD) ketika selesai konfigurasi
 
-1. Langkah awal, masuk ke bootloader Opencore kemudian ketika masuk ke pilihan boot picker, tekan tombol space pada dan pilih Shell.efi
+1. Langkah awal, masuk ke bootloader Opencore kemudian ketika masuk ke pilihan boot picker, tekan tombol space pada dan pilih `Shell.efi`
 2. Setelah masuk ke tampilan UEFI Shell, ketikkan perintah berikut untuk masuk ke direktori file EFI untuk booting:
     
         FS0:
@@ -64,3 +64,11 @@ Sebelum melakukan configurasi pada file `config.plist`, lakukan backup terlebih 
 17. Apabila sudah selesai, silakan `Save` config.plist nya dan coba lakukan restart, nanti akan muncul 2 pilihan OS pada menu boot picker, kemudian pilih OS yang baru ditambahkan, pada contoh kali ini namanya `Arch Linux`
 18. Bila ketika OS yang baru ditambahkan di boot picker Opencore hanya muncul blank hitam, cek kembali `path` yang sebelumnya ditambahkan, kemudian ganti lagi dengan `path` yang terdapat pada list `map_table.txt`
 19. Apabila bisa masuk ke OS kedua, berarti konfigurasinya sudah sesuai, dan tentu dengan memasukkan grub di Opencore akan jauh lebih aman apabila kita melakukan reset nvram ketika ada perubahan konfigurasi pada Opencore yg mengharuskan melakukan reset nvram.
+
+
+
+
+### Credits
+
+* **OpenCore Bootloader** from [OpenCore Respository](https://dortania.github.io/builds/?viewall=true)
+* **Guide For Adding Boot Entries In Opencore** from [OpenCore Z390-Aorus-Pro-9700K-RX580 by Sarkrui](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/wiki/How-to-add-a-boot-entry-in-OpenCore)
