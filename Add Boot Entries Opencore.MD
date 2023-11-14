@@ -55,10 +55,10 @@ Sebelum melakukan configurasi pada file `config.plist`, lakukan backup terlebih 
 13. Pada contoh di perangkat saya, letak direktori index identifier berada di `fs0`, selanjutnya copy `path` yang berada dibawah `fs0` seperti berikut:
 
          PciRoot(0x0)/Pci(0x1D,0x4)/Pci(0x0,0x0)/NVMe(0x1,00-00-00-00-00-00-00-00)/HD(1,GPT,0001E177-0840-7E55-CEAC-D501EEC20300,0x800,0x1BC800)
-14. Paste `path` ke `Entries`, kemudian tambahkan alamat letak file GRUB berada, pada contoh kali ini letak file nya adalah `grub\x86_64\grub.efi`
+14. Paste `path` ke `Entries`, kemudian tambahkan alamat letak file GRUB berada, pada contoh kali ini letak file nya adalah `grub\x86_64-efi\grub.efi`
 15. Sehingga hasilnya akan seperti ini:
     
-        PciRoot(0x0)/Pci(0x1D,0x4)/Pci(0x0,0x0)/NVMe(0x1,00-00-00-00-00-00-00-00)/HD(1,GPT,0001E177-0840-7E55-CEAC-D501EEC20300,0x800,0x1BC800)/\grub\x86_64\grub.efi
+        PciRoot(0x0)/Pci(0x1D,0x4)/Pci(0x0,0x0)/NVMe(0x1,00-00-00-00-00-00-00-00)/HD(1,GPT,0001E177-0840-7E55-CEAC-D501EEC20300,0x800,0x1BC800)/\grub\x86_64-efi\grub.efi
 
 16. Setelah alamat `path` sudah dimasukkan, kemudian bagian key `Name` rubah sesuai keinginan agar ketika booting di Opencore muncul nama OS yang barusan ditambahkan, pada contoh kali ini saya kasih nama `Arch Linux`, karena sebelum menginstal MacOS, perangkat saya menggunakan OS dari Arch Linux, dan jangan lupa centang untuk key `Enabled` pada Opencore Configurator maupun `True` atau `0` apabila menggunakan ProperTree
 17. Apabila sudah selesai, silakan `Save` config.plist nya dan coba lakukan restart, nanti akan muncul 2 pilihan OS pada menu boot picker, kemudian pilih OS yang baru ditambahkan, pada contoh kali ini namanya `Arch Linux`
