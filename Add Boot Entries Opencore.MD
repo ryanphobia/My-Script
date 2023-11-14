@@ -49,8 +49,8 @@ Sebelum melakukan configurasi pada file `config.plist`, lakukan backup terlebih 
         BLK1: Alias(s):
           PciRoot(0x0)/Pci(0x17,0x0)/Sata(0x1,0x8000,0x0)/HD(1,GPT,4B130DBC-2B82-4E9B-A75F-E74D71FEE31C,0x800,0x74706000)
 
-10. Sesuaikan letak `path` dengan yang ada pada `map table` perangkat kalian karena bisa saja terjadi berbeda karena perbedaan pada instalasi bootloader serta model storage yang digunakan agar nantinya Opencore bisa mendeteksi bootloader lain yang telah dimasukkan
-11. Setelah `path` sudah ditemukan, lanjut buka file `config.plist` pada yang terletak di folder `OC` dengan menggunakan Plist editor seperti `ProperTree` atau `Xplist`, bisa juga dengan menggunakan aplikasi `Opencore Auxiliary Tool (OCAT)` maupun `Opencore Configurator` seperti yang ada di tutorial saya gunakan
+10. Sesuaikan letak `path` dengan yang ada pada `map table` perangkat kalian karena bisa saja berbeda karena perbedaan pada instalasi bootloader serta model jenis storage yang digunakan agar nantinya Opencore bisa mendeteksi bootloader lain yang telah dimasukkan
+11. Setelah `path` sudah ditemukan, lanjut buka file `config.plist` pada yang terletak di folder `OC` dengan menggunakan Plist editor seperti `ProperTree` atau `Xplist`, bisa juga dengan menggunakan aplikasi `Opencore Auxiliary Tool (OCAT)` maupun `Opencore Configurator` seperti yang ada di tutorial ini.
 12. Ketika `config.plist` sudah terbuka, langsung masuk ke `Misc` -> `Entries`
 13. Pada contoh di perangkat saya, letak direktori index identifier berada di `fs0`, selanjutnya copy `path` yang berada dibawah `fs0` seperti berikut:
 
