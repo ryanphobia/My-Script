@@ -18,6 +18,7 @@ Pada contoh kali ini kita akan membuat list simple queue dengan masing-masing IP
 
 ## Script Port Forwarding Untuk Akses Server Lokal di Luar Jaringan
 
+    /ip firewall nat
     add action=dst-nat chain=dstnat comment=Nama_Service/Server dst-address=IP-Public \
     dst-port=port-untuk-public protocol=tcp to-addresses=IP-Lokal-server to-ports=port-lokal
 
@@ -51,7 +52,31 @@ to-ports=3306`
 
 4. Apabila semua alamat IP baik lokal dan publik beserta port nya sudah ditentukan, maka output hasilnya akan seperti ini:
 
+        /ip firewall nat
         add action=dst-nat chain=dstnat comment=Server-Database dst-address=107.67.125.39 dst-port=3306 protocol=tcp to-addresses=192.168.1.65 to-ports=3306
 
-#### Notes: Apabila di jaringan kalian sudah ada yang menggunakan port 3306 atau port yang sama namun beda service sehingga menyebabkan tidak bisa diakses dari luar, silakan ganti nomor port pada `dst-port` dengan port lain yang tidak digunakan.
+    #### Notes: Apabila di jaringan kalian sudah ada yang menggunakan port `3306` atau port yang sama namun beda service sehingga menyebabkan tidak bisa diakses dari luar, silakan ganti nomor port pada `dst-port` dengan port lain yang tidak digunakan.
+</br>
+
+## Blokir Akses Port Suatu Service atau Aplikasi
+Di script ini berfungsi untuk mencegah beberapa alamat IP dengan interface ethernet yang berbeda agar tidak bisa mengakses ke perangkat lain, misalnya server, berikut contoh script nya:
+
+    /ip firewall filter
+    add action=drop chain=forward comment="Tujuan Blokir" dst-port=port-yang-diblokir in-interface=interface-yang-diblokir protocol=tcp
+
+Pada script diatas adalah contoh untuk memblokir akses suatu service atau aplikasi yang memerlukan akses ke suatu jaringan menggunakan port tertentu, pada contoh kali ini adalah melakukan blokir untuk akses folder share windows yang menggunakan protokol `SMB` dengan port `135,137,138,139,445` pada jaringan yang tersambung melalui `ether5`. </br>
+Maka dari itu variabel yang perlu dirubah diantaranya `dst-port` menjadi seperti berikut:
+
+    dst-port=135,137,138,139,445
+
+Kemudian, pada bagian `in-interface` diisi dengan nomor interface `ether` yang mau diblokir, hasilnya jadi seperti berikut:
+
+    in-interface=ether5
+
+Dan untuk hasil akhirnya akan menjadi seperti dibawah ini:
+
+    /ip firewall filter
+    add action=drop chain=forward comment="Blokir Folder Share Windows" dst-port=135,137,138,139,445 in-interface=ether5 protocol=tcp
+
+Setelah selesai, coba lakukan mengakses IP folder share pada koneksi yang melalui `ether5`, apabila terjadi error tidak bisa diakses, berarti konfigurasi sudah berjalan.        
 
