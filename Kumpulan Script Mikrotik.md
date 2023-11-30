@@ -51,8 +51,7 @@ to-ports=3306`
 
 4. Apabila semua alamat IP baik lokal dan publik beserta port nya sudah ditentukan, maka output hasilnya akan seperti ini:
 
-    `add action=dst-nat chain=dstnat comment=Server-Database dst-address=107.67.125.39 \
-    dst-port=3306 protocol=tcp to-addresses=192.168.1.65 to-ports=3306`
+        add action=dst-nat chain=dstnat comment=Server-Database dst-address=107.67.125.39 dst-port=3306 protocol=tcp to-addresses=192.168.1.65 to-ports=3306
 
 #### Notes: Apabila di jaringan kalian sudah ada yang menggunakan port 3306 atau port yang sama namun beda service sehingga menyebabkan tidak bisa diakses dari luar, silakan ganti nomor port pada `dst-port` dengan port lain yang tidak digunakan.
 
