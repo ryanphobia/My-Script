@@ -25,7 +25,7 @@ alias konek-hide="sudo hide.me connect free-unlimited.hideservers.net"
 alias nganudockstation="sudo setfacl -m user:liriz:rw /var/run/docker.sock"
 
 #IPerf
-alias cepet-ra="iperf3 -c speedtest.myrepublic.net.id -p 9200-9240 -P 32"
+alias cepet-ra="iperf3 -c speedtest.sin1.sg.leaseweb.net -p 5201-5210 -P 32"
 
 #Pacman
 alias mbusek-paket-ora-kanggo="sudo pacman -Qtdq | sudo pacman -Rns -"
