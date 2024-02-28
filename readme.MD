@@ -1,3 +1,1 @@
-Kumpulan Script sing digawe bendino
-
-Kebanyakan script nggo docker karo bash
+# Kumpulan Panduan Instalasi dan Dokumentasi Troubleshooting
