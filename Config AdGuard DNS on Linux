@@ -1,8 +1,0 @@
-# Panduan Konfigurasi AdGuard Pada Linux
-
-Berikut panduan untuk instalasi AdGuard DNS di sistem operasi (OS) linux, pada contoh kali ini OS linux yang saya gunakan adalah Arch Linux.
-
-1. pertama, pastikan tidak service atau aplikasi yang menggunakan port 53, untuk mengecek apakah ada service yang menggunakan port 53, perintahnya sebagai Berikut
-
-        sudo lsof -i -P -n | grep LISTEN
-
