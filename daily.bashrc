@@ -58,3 +58,10 @@ alias pekso="sudo pacman -Syyu --overwrite "*""
 
 #DNS
 alias dns="sudo systemd-resolve --flush-caches"
+
+
+#CekTTL
+alias cekttl="sysctl net.ipv4.ip_default_ttl"
+
+#AxisWarnet
+alias warnet="sudo sysctl -w net.ipv4.ip_default_ttl=65"
