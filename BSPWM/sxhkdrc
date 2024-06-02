@@ -50,7 +50,7 @@ ctrl + alt + c
 
 # Open Dolphin File Manager
 super + e
-	dolphin
+	nautilus
 
 # Hide/Show Bar (Polybar and/or eww)
 super + {h,u}
